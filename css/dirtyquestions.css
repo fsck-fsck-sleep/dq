@@ -1,0 +1,79 @@
+form#filter {
+	padding: 19px 10px 10px 19px;
+}
+
+	form#filter input#questionFilterTextTmp,
+	form#filter input#questionFilterNoteTmp {
+		width: 20em;
+		height: 1.5em;
+		border: 1px solid #ddd;
+		padding: 0.1em 0.25em;
+		margin: 0 2em;
+	}
+
+	form#filter label {
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+table#questions {
+}
+
+	table#questions tr:first-child th {
+		border-width: 0;
+	}
+
+	table#questions select {
+		width: 2.5em;
+	}
+
+	table#questions .small {
+		width: 3em;
+	}
+
+	table#questions textarea {
+		resize: none;
+		height: 1.5em;
+		border: 1px solid #ddd;
+		padding: 0.1em 0.25em;
+		overflow: hidden;
+		background-color: #c8c8c8;
+	}
+
+	table#questions textarea.open {
+		position: absolute;
+		height: 7em;
+		width: 35em;
+		box-shadow: 0 0 10px #ccc;
+		overflow: auto;
+	}
+
+sidebar.panel {
+	left: 20px;
+	position: fixed;
+	width: 350px;
+}
+
+	sidebar.panel .panel-body {
+		text-align: center;
+	}
+
+	sidebar.panel .panel-body * {
+		text-align: left;
+	}
+
+	sidebar.panel .panel-body p {
+		font-style: italic;
+	}
+
+		sidebar.panel .panel-body p span {
+			font-size: 1.4em;
+		}
+
+	sidebar.panel .panel-body svg {
+		margin: 0 auto;
+	}
+
+		sidebar.panel .panel-body svg text {
+			fill: #c8c8c8;
+		}
