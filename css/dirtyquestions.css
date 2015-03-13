@@ -49,9 +49,6 @@ table#questions {
 	}
 
 sidebar.panel {
-	left: 20px;
-	position: fixed;
-	width: 350px;
 }
 
 	sidebar.panel .panel-body {
@@ -77,3 +74,7 @@ sidebar.panel {
 		sidebar.panel .panel-body svg text {
 			fill: #c8c8c8;
 		}
+
+footer {
+	text-align: center;
+}

@@ -1,7 +1,7 @@
 dirtyQuestionsApp.directive('dqVisualisation', function () {
 	// constants
 	var margin = 20,
-		width = 300,
+		width = 220,
 		height = 500 - .5 - margin,
 		color = d3.interpolateRgb("#f77", "#77f");
 

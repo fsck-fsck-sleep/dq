@@ -1,4 +1,4 @@
-		<sidebar class="panel panel-default">
+		<sidebar class="panel panel-default col-md-3">
 			<h2 class="panel-heading">Progress</h2>
 			<div class="panel-body">
 				<p>
@@ -18,76 +18,78 @@
 			</div>
 		</sidebar>
 
-		<p>
-			<a class="btn btn-default btn-lg" download href="data:application/json,{{exportJSON()}}">Download JSON</a>
-			<a class="btn btn-default btn-lg" download href="data:text/csv,{{exportCSV()}}">Download CSV</a>
-			<a class="btn btn-default btn-lg" href="#/open-json">Open JSON</a>
-			<a class="btn btn-danger btn-lg" href="#/reset">Reset</a>
-		</p>
-
-		<form class="form-inline well" id="filter">
+		<div class="col-md-9">
 			<p>
-				<label for="questionFilterRating" class="control-label">Rating:</label>
-				<select ng-model="questionFilterRating" 
-					ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
-					<option value="">(all)</option>
-				</select>
-
-				<input id="questionFilterTextTmp" type="text"
-					ng-model="questionFilterTextTmp" placeholder="Search questions..." 
-					class="form-control" />
-
-				<input type="checkbox" id="questionFilterDone"
-					ng-click="cycle('questionFilterDone')" 
-					ng-checked="questionFilterDone"
-					ui-indeterminate="questionFilterDoneAny"
-					class="form-control" />
-				<label for="questionFilterDone" class="control-label">Done?</label>
-
-				<input id="questionFilterNoteTmp" type="text"
-					ng-model="questionFilterNoteTmp" placeholder="Search notes..." 
-					class="form-control" />
+				<a class="btn btn-default btn-lg" download href="data:application/json,{{exportJSON()}}">Download JSON</a>
+				<a class="btn btn-default btn-lg" download href="data:text/csv,{{exportCSV()}}">Download CSV</a>
+				<a class="btn btn-default btn-lg" href="#/open-json">Open JSON</a>
+				<a class="btn btn-danger btn-lg" href="#/reset">Reset</a>
 			</p>
-		</form>
 
-		<form>
-			<table class="table table-striped table-hover" id="questions">
-				<thead>
-					<tr>
-						<th rowspan="2"></th>
-						<th colspan="2">Done?</th>
-						<th colspan="2">&#9733;</th>
-						<th>Notes</th>
-					</tr>
-					<tr>
-						<th class="small">S</th>
-						<th class="small">D</th>
-						<th class="small">S</th>
-						<th class="small">D</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="question in questions.content | filter:questionFilter">
-						<td>{{ question.text }}</td>
-						<td class="small"><input type="checkbox" ng-model="question.done.0"/></td>
-						<td class="small"><input type="checkbox" ng-model="question.done.1"/></td>
-						<td class="small">
-							<select ng-model="question.rating.0" ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
-							</select>
-						</td>
-						<td class="small">
-							<select ng-model="question.rating.1" ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
-							</select>
-						</td>
-						<td>
-							<textarea class="form-control" ng-model="question.note"
-								ng-class="{true: 'open', false: 'closed'}[question.expanded]"
-								ng-focus="question.expanded = true"
-								ng-click="question.expanded = true"
-								ng-blur="question.expanded = false">
-							</textarea>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</form>
+			<form class="form-inline well" id="filter">
+				<p>
+					<label for="questionFilterRating" class="control-label">Rating:</label>
+					<select ng-model="questionFilterRating" 
+						ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
+						<option value="">(all)</option>
+					</select>
+
+					<input id="questionFilterTextTmp" type="text"
+						ng-model="questionFilterTextTmp" placeholder="Search questions..." 
+						class="form-control" />
+
+					<input type="checkbox" id="questionFilterDone"
+						ng-click="cycle('questionFilterDone')" 
+						ng-checked="questionFilterDone"
+						ui-indeterminate="questionFilterDoneAny"
+						class="form-control" />
+					<label for="questionFilterDone" class="control-label">Done?</label>
+
+					<input id="questionFilterNoteTmp" type="text"
+						ng-model="questionFilterNoteTmp" placeholder="Search notes..." 
+						class="form-control" />
+				</p>
+			</form>
+
+			<form>
+				<table class="table table-striped table-hover" id="questions">
+					<thead>
+						<tr>
+							<th rowspan="2"></th>
+							<th colspan="2">Done?</th>
+							<th colspan="2">&#9733;</th>
+							<th>Notes</th>
+						</tr>
+						<tr>
+							<th class="small">S</th>
+							<th class="small">D</th>
+							<th class="small">S</th>
+							<th class="small">D</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="question in questions.content | filter:questionFilter">
+							<td>{{ question.text }}</td>
+							<td class="small"><input type="checkbox" ng-model="question.done.0"/></td>
+							<td class="small"><input type="checkbox" ng-model="question.done.1"/></td>
+							<td class="small">
+								<select ng-model="question.rating.0" ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
+								</select>
+							</td>
+							<td class="small">
+								<select ng-model="question.rating.1" ng-options="r.id as r.id + ' - ' + r.label for r in ratings">
+								</select>
+							</td>
+							<td>
+								<textarea class="form-control" ng-model="question.note"
+									ng-class="{true: 'open', false: 'closed'}[question.expanded]"
+									ng-focus="question.expanded = true"
+									ng-click="question.expanded = true"
+									ng-blur="question.expanded = false">
+								</textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
