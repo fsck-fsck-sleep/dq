@@ -1,8 +1,6 @@
 dirty questions
 ==============
 
-What have you tried?
-
 Answer questions, save to JSON, email to your partner, view theirs.
 
 [Suggestions, bug reports][issue] and [patches][pull] welcome.

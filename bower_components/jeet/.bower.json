@@ -1,0 +1,42 @@
+{
+  "name": "jeet",
+  "version": "6.1.0",
+  "homepage": "http://jeet.gs",
+  "authors": [
+    "Cory Simmons <csimmonswork@gmail.com>",
+    "Sam Saccone <sam@mojotech.com>",
+    "Jake Cleary <shout@jakecleary.net>"
+  ],
+  "description": "A grid system for humans.",
+  "main": [
+    "stylus/jeet/index.styl",
+    "scss/jeet/index.scss"
+  ],
+  "keywords": [
+    "grid",
+    "stylus",
+    "sass",
+    "scss",
+    "framework",
+    "ratio",
+    "fraction"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "6.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.1.0",
+    "commit": "a3dd11af51d41e0a2800d8721c86a2cef89f9d28"
+  },
+  "_source": "https://github.com/mojotech/jeet.git",
+  "_target": "6.1.0",
+  "_originalSource": "jeet",
+  "_direct": true
+}

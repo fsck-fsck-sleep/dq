@@ -1,0 +1,312 @@
+@import 'jeet'
+
+// typography
+
+@font-face
+	font-family: 'junction_regularregular'
+	src: url('fonts/Junction-webfont.eot')
+	src: url('fonts/Junction-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/Junction-webfont.woff') format('woff'),
+			 url('fonts/Junction-webfont.ttf') format('truetype'),
+			 url('fonts/Junction-webfont.svg#junction_regularregular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+$xx-large = 3.5
+$x-large = 2
+$large = 1.15
+$small = 0.75
+
+$regular = 16
+$row_height = 20
+
+$row_ratio = ($row_height / $regular)
+
+// colors
+
+$black = #111
+$white = #eee
+
+$grey-darker = #222
+$grey-dark = #444
+$grey = #777
+$grey-light = #bbb
+
+$red = #f00
+$red-dark = #701100
+
+// page structure & format
+
+body
+	background-color: $black
+	color: $white
+	font-size: ($regular)px
+	font-family: junction_regularregular
+
+section#app
+	center()
+
+h1
+	font-size: ($xx-large)rem
+	font-weight: bold
+	line-height: (4 * $row_ratio / $xx-large)
+	margin: unit($row_ratio / $xx-large / 2, 'rem') 0
+
+h2
+	font-size: ($x-large)rem
+	font-weight: bold
+	line-height: (2 * $row_ratio / $x-large)
+	margin: unit($row_ratio / $x-large / 2, 'rem') 0
+
+h3
+	font-size: ($large)rem
+	font-weight: bold
+	line-height: (2 * $row_ratio / $x-large)
+	margin: unit($row_ratio / $large / 2, 'rem') 0
+
+section#app > footer
+	font-size: ($small)rem
+	line-height: ($row_ratio / $small)
+	column(1/3, offset: 1/3)
+	text-align: center
+	margin-top: unit(1 * $row_ratio / $small, 'rem')
+
+p
+	line-height: $row_ratio
+	margin: unit($row_ratio / 2, 'rem') 0
+
+a
+	text-decoration: none
+	font-weight: bold
+	color: $red
+
+button()
+	color: $white
+	background-color: $red-dark
+	font-weight: bold
+	border: none
+	font-size: ($large)rem
+	line-height: ($row_ratio / $large * 2)
+	padding: 0 unit($row_ratio / $large, 'rem')
+	display: inline-block
+	transition: background-color .2s ease
+
+	&:hover
+		background-color: darken($red-dark, 30%)
+
+button, .button
+	button()
+
+input[type=file]
+	display: none
+
+	& + label
+		button()
+
+select
+	width: 1.25em
+	background-color: $grey
+	line-height: 1
+	border: 0
+	border-radius: 0
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	font-weight: bold
+	color: $white
+
+// "welcome", reset
+
+ng-view > article
+	margin-top: unit($row_ratio, 'rem') * 5
+	column(1/5, offset: 2/5)
+	h1
+		width: 100%
+		text-align: center
+	ul
+		margin-top: unit($row_ratio, 'rem')
+		text-align: center
+		li
+			display: inline-block
+			margin: 0 unit($row_ratio, 'rem')
+			a
+				button()
+
+// quiz
+
+sidebar
+	column(1/4)
+	background-color: $grey-dark
+	margin-top: unit($row_ratio, 'rem')
+	color: $white
+
+	p
+		margin-left: 5%
+		margin-top: unit($row_ratio, 'rem')
+
+	#progress
+		background-color: $red-dark
+		height: unit($row_ratio, 'rem')
+		width: 90%
+		margin-left: 5%
+
+		span
+			display: block
+			text-indent: -9999px
+			background-color: $red
+			height: unit($row_ratio, 'rem')
+
+	dq-visualisation
+		text-align: center
+		width: 100%
+
+		svg
+			display: block
+			margin: unit($row_ratio, 'rem') auto
+
+			text
+				font-weight: bold
+				font-size: ($small)rem
+
+				&.values
+					fill: $red
+					//text-shadow: 1px 1px 1px $white
+
+				&.groups
+					fill: $white
+
+			.axis
+				stroke: $grey
+
+section#quiz
+	background-color: $grey-darker
+	margin-top: unit($row_ratio, 'rem')
+	column(3/4)
+
+	nav#menu
+		position: relative
+		float: right
+		padding: unit($row_ratio / 2, 'rem')
+		background-color: $grey-dark
+		transition: background-color .2s ease
+
+		&:before
+			content: "\2699"
+
+		ul
+			visibility: hidden
+			opacity: 0
+			right: 0
+			top: unit($row_ratio * 2, 'rem')
+			position: absolute
+			width: 10em
+			background-color: $grey-light
+			padding: unit($row_ratio / 2, 'rem')
+			z-index: 10
+			transition: visibility .2s ease, opacity .2s ease
+
+			li
+				line-height: $row_ratio
+				margin: unit($row_ratio / 2, 'rem') 0 
+
+				a 
+					color: $black
+					font-weight: normal
+
+					&:hover
+						color: $grey-dark
+
+		&:hover 
+			background-color: $grey-light
+
+			ul
+				visibility: visible
+				opacity: 1
+
+	form#filter
+		width: 100%
+		background-color: $red-dark
+		line-height: unit($row_ratio * 2, 'rem')
+		text-indent unit($row_ratio / 2, 'rem')
+
+		span
+			display: none
+
+		ul
+			&:before
+				content: "\1F50D"
+				margin: 0 0 0 unit($row_ratio / 2, 'rem')
+
+			li
+				display: inline-block
+				margin: 0 unit($row_ratio / 2, 'rem')
+
+				input, select
+					vertical-align: middle
+					margin-left: .25rem
+
+				select
+					text-indent: .05rem
+
+				input[type=text]
+					height: unit($row_ratio * 1.5, 'rem')
+					padding: 0.3rem unit($row_ratio / 2, 'rem')
+					background-color: $grey
+					color: $white
+					border: none
+
+	form#questions
+		padding: unit($row_ratio, 'rem')
+
+		table
+			width: 100%
+
+			td
+				height: unit($row_ratio * 2, 'rem')
+				vertical-align: middle
+				position: relative
+
+				&.done
+					text-align: center
+
+				&.willing
+					text-align: center
+
+				textarea
+					margin-left: .5em
+					height: unit($row_ratio, 'rem')
+					resize: none
+					padding: 0.1em 0.25em
+					overflow: hidden
+					background-color: $grey
+					width: 100%
+					border: none
+					color: $white
+
+					&.open
+						border: 1px solid $white
+						position: absolute
+						height: 7em
+						width: 35em
+						box-shadow: 0 0 10px #ccc
+						overflow: auto
+						top: 9px
+						z-index: 10
+
+		input[type=checkbox]
+			display: none
+
+			& + label
+				cursor: pointer
+				font-weight: bold
+				color: $grey
+				transition: color .2s ease
+
+				&:hover
+					color: $grey-dark
+
+			&:checked + label
+				color: $red
+
+				&:hover
+					color: $red-dark

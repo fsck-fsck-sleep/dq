@@ -1,0 +1,385 @@
+@font-face {
+  font-family: 'junction_regularregular';
+  src: url("fonts/Junction-webfont.eot");
+  src: url("fonts/Junction-webfont.eot?#iefix") format('embedded-opentype'), url("fonts/Junction-webfont.woff") format('woff'), url("fonts/Junction-webfont.ttf") format('truetype'), url("fonts/Junction-webfont.svg#junction_regularregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #111;
+  color: #eee;
+  font-size: 16px;
+  font-family: junction_regularregular;
+}
+section#app {
+  *zoom: 1;
+  width: auto;
+  max-width: 1440px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+section#app:before,
+section#app:after {
+  content: '';
+  display: table;
+}
+section#app:after {
+  clear: both;
+}
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.428571428571429;
+  margin: 0.178571428571429rem 0;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0.3125rem 0;
+}
+h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0.543478260869565rem 0;
+}
+section#app > footer {
+  font-size: 0.75rem;
+  line-height: 1.666666666666667;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 34.33333333333333%;
+  margin-right: 3%;
+  text-align: center;
+  margin-top: 1.666666666666667rem;
+}
+section#app > footer:before,
+section#app > footer:after {
+  content: '';
+  display: table;
+}
+section#app > footer:after {
+  clear: both;
+}
+section#app > footer:last-child {
+  margin-right: 0%;
+}
+p {
+  line-height: 1.25;
+  margin: 0.625rem 0;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f00;
+}
+button,
+.button {
+  color: #eee;
+  background-color: #701100;
+  font-weight: bold;
+  border: none;
+  font-size: 1.15rem;
+  line-height: 2.173913043478261;
+  padding: 0 1.086956521739131rem;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+button:hover,
+.button:hover {
+  background-color: #4e0c00;
+}
+input[type=file] {
+  display: none;
+}
+input[type=file] + label {
+  color: #eee;
+  background-color: #701100;
+  font-weight: bold;
+  border: none;
+  font-size: 1.15rem;
+  line-height: 2.173913043478261;
+  padding: 0 1.086956521739131rem;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+input[type=file] + label:hover {
+  background-color: #4e0c00;
+}
+select {
+  width: 1.25em;
+  background-color: #777;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: bold;
+  color: #eee;
+}
+ng-view > article {
+  margin-top: 6.25rem;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 17.6%;
+  margin-left: 41.2%;
+  margin-right: 3%;
+}
+ng-view > article:before,
+ng-view > article:after {
+  content: '';
+  display: table;
+}
+ng-view > article:after {
+  clear: both;
+}
+ng-view > article:last-child {
+  margin-right: 0%;
+}
+ng-view > article h1 {
+  width: 100%;
+  text-align: center;
+}
+ng-view > article ul {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+ng-view > article ul li {
+  display: inline-block;
+  margin: 0 1.25rem;
+}
+ng-view > article ul li a {
+  color: #eee;
+  background-color: #701100;
+  font-weight: bold;
+  border: none;
+  font-size: 1.15rem;
+  line-height: 2.173913043478261;
+  padding: 0 1.086956521739131rem;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+ng-view > article ul li a:hover {
+  background-color: #4e0c00;
+}
+sidebar {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  background-color: #444;
+  margin-top: 1.25rem;
+  color: #eee;
+}
+sidebar:before,
+sidebar:after {
+  content: '';
+  display: table;
+}
+sidebar:after {
+  clear: both;
+}
+sidebar:last-child {
+  margin-right: 0%;
+}
+sidebar p {
+  margin-left: 5%;
+  margin-top: 1.25rem;
+}
+sidebar #progress {
+  background-color: #701100;
+  height: 1.25rem;
+  width: 90%;
+  margin-left: 5%;
+}
+sidebar #progress span {
+  display: block;
+  text-indent: -9999px;
+  background-color: #f00;
+  height: 1.25rem;
+}
+sidebar dq-visualisation {
+  text-align: center;
+  width: 100%;
+}
+sidebar dq-visualisation svg {
+  display: block;
+  margin: 1.25rem auto;
+}
+sidebar dq-visualisation svg text {
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+sidebar dq-visualisation svg text.values {
+  fill: #f00;
+}
+sidebar dq-visualisation svg text.groups {
+  fill: #eee;
+}
+sidebar dq-visualisation svg .axis {
+  stroke: #777;
+}
+section#quiz {
+  background-color: #222;
+  margin-top: 1.25rem;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 74.25%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+section#quiz:before,
+section#quiz:after {
+  content: '';
+  display: table;
+}
+section#quiz:after {
+  clear: both;
+}
+section#quiz:last-child {
+  margin-right: 0%;
+}
+section#quiz nav#menu {
+  position: relative;
+  float: right;
+  padding: 0.625rem;
+  background-color: #444;
+  transition: background-color 0.2s ease;
+}
+section#quiz nav#menu:before {
+  content: "\2699";
+}
+section#quiz nav#menu ul {
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  top: 2.5rem;
+  position: absolute;
+  width: 10em;
+  background-color: #bbb;
+  padding: 0.625rem;
+  z-index: 10;
+  transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+section#quiz nav#menu ul li {
+  line-height: 1.25;
+  margin: 0.625rem 0;
+}
+section#quiz nav#menu ul li a {
+  color: #111;
+  font-weight: normal;
+}
+section#quiz nav#menu ul li a:hover {
+  color: #444;
+}
+section#quiz nav#menu:hover {
+  background-color: #bbb;
+}
+section#quiz nav#menu:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+section#quiz form#filter {
+  width: 100%;
+  background-color: #701100;
+  line-height: 2.5rem;
+  text-indent: 0.625rem;
+}
+section#quiz form#filter span {
+  display: none;
+}
+section#quiz form#filter ul:before {
+  content: "\1F50D";
+  margin: 0 0 0 0.625rem;
+}
+section#quiz form#filter ul li {
+  display: inline-block;
+  margin: 0 0.625rem;
+}
+section#quiz form#filter ul li input,
+section#quiz form#filter ul li select {
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+section#quiz form#filter ul li select {
+  text-indent: 0.05rem;
+}
+section#quiz form#filter ul li input[type=text] {
+  height: 1.875rem;
+  padding: 0.3rem 0.625rem;
+  background-color: #777;
+  color: #eee;
+  border: none;
+}
+section#quiz form#questions {
+  padding: 1.25rem;
+}
+section#quiz form#questions table {
+  width: 100%;
+}
+section#quiz form#questions table td {
+  height: 2.5rem;
+  vertical-align: middle;
+  position: relative;
+}
+section#quiz form#questions table td.done {
+  text-align: center;
+}
+section#quiz form#questions table td.willing {
+  text-align: center;
+}
+section#quiz form#questions table td textarea {
+  margin-left: 0.5em;
+  height: 1.25rem;
+  resize: none;
+  padding: 0.1em 0.25em;
+  overflow: hidden;
+  background-color: #777;
+  width: 100%;
+  border: none;
+  color: #eee;
+}
+section#quiz form#questions table td textarea.open {
+  border: 1px solid #eee;
+  position: absolute;
+  height: 7em;
+  width: 35em;
+  box-shadow: 0 0 10px #ccc;
+  overflow: auto;
+  top: 9px;
+  z-index: 10;
+}
+section#quiz form#questions input[type=checkbox] {
+  display: none;
+}
+section#quiz form#questions input[type=checkbox] + label {
+  cursor: pointer;
+  font-weight: bold;
+  color: #777;
+  transition: color 0.2s ease;
+}
+section#quiz form#questions input[type=checkbox] + label:hover {
+  color: #444;
+}
+section#quiz form#questions input[type=checkbox]:checked + label {
+  color: #f00;
+}
+section#quiz form#questions input[type=checkbox]:checked + label:hover {
+  color: #701100;
+}

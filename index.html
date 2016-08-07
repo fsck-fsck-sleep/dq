@@ -5,46 +5,34 @@
 
 	<title>Dirty Questions</title>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="css/dirtyquestions.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" 
+	  href="bower_components/HTML5-Reset/assets/css/reset.css" />
 	
-	<script src="bower_components/jquery/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="dirtyquestions.css" />
+	
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 	<script src="bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.min.js" type="text/javascript"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
 	<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
 	<script src="bower_components/d3/d3.min.js" type="text/javascript"></script>
 
-	<script src="js/dirtyquestions.js" type="text/javascript"></script>
-	<script src="js/questions_service.js" type="text/javascript"></script>
-	<script src="js/filereader_service.js" type="text/javascript"></script>
-	<script src="js/question_controller.js" type="text/javascript"></script>
-	<script src="js/open_json_controller.js" type="text/javascript"></script>
-	<script src="js/directives.js" type="text/javascript"></script>
+	<script src="dirtyquestions.js" type="text/javascript"></script>
+	<script src="services/questions.js" type="text/javascript"></script>
+	<script src="services/filereader.js" type="text/javascript"></script>
+	<script src="controllers/question.js" type="text/javascript"></script>
+	<script src="controllers/open_json.js" type="text/javascript"></script>
+	<script src="directives.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Dirty Questions</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="container" ng-app="dirtyQuestionsApp">
+	<section id="app" ng-app="dirtyQuestionsApp">
 		<ng-view></ng-view>
 
-		<hr>
-
 		<footer>
-			<p>&copy; fsckfscksleep 2013-2014. Available
-				<a href="https://github.com/fsckfscksleep/dirtyquestions">under GNU AGPL</a>.</p>
+			<p>
+				&copy; fsckfscksleep 2013-2016. <br>
+				<a href="https://github.com/fsckfscksleep/dirtyquestions">Available</a>
+				under GNU AGPL.</p>
 		</footer>
-	</div> <!-- /container -->
+	</section> <!-- /app -->
 </body>
 </html>
