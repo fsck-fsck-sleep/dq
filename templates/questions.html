@@ -1,19 +1,7 @@
-<sidebar>
-	<p>
-		answered <span>{{complete}}</span> of 
-		<span>{{questions.content.length}}</span>
-		({{complete_percent().toFixed(2)}}%)
-	</p>
-	<div id="progress">
-		<span style="width: {{complete_percent().toFixed(2)}}%;">{{complete_percent().toFixed(2)}} Complete</span>
-	</div>
-	<dq-visualisation val="ratings_freq"></dq-visualisation>
-</sidebar>
-
 <section id="quiz">
 	<nav id="menu">
 		<ul>
-			<li><a href="data:application/json,{{exportJSON()}}">Save quiz to file</a>
+			<li><a href="data:application/json,{{exportJSON()}}" download>Save quiz to file</a>
 			<li><a href="data:text/csv,{{exportCSV()}}">Download CSV</a>
 			<li><a href="#/open">Open saved quiz</a>
 			<li><a href="#/reset">Reset</a>
@@ -101,4 +89,16 @@
 			</tbody>
 		</table>
 	</form>
-</div>
+</section>
+
+<sidebar>
+	<p>
+		answered <span>{{complete}}</span> of 
+		<span>{{questions.content.length}}</span>
+		({{complete_percent().toFixed(2)}}%)
+	</p>
+	<div id="progress">
+		<span style="width: {{complete_percent().toFixed(2)}}%;">{{complete_percent().toFixed(2)}} Complete</span>
+	</div>
+	<dq-visualisation val="ratings_freq"></dq-visualisation>
+</sidebar>

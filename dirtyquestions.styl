@@ -119,10 +119,13 @@ select
 
 ng-view > article
 	margin-top: unit($row_ratio, 'rem') * 5
-	column(1/5, offset: 2/5)
+	column(1/3, offset: 1/3)
 
-	@media screen and (max-width: 1280px)
-		column(1/3, offset: 1/3)
+	&.welcome
+		column(1/5, offset: 2/5)
+
+		@media screen and (max-width: 1280px)
+			column(1/3, offset: 1/3)
 
 	h1
 		width: 100%
@@ -138,54 +141,11 @@ ng-view > article
 
 // quiz
 
-sidebar
-	column(1/4)
-	background-color: $grey-dark
-	margin-top: unit($row_ratio, 'rem')
-	color: $white
-
-	p
-		margin-left: 5%
-		margin-top: unit($row_ratio, 'rem')
-
-	#progress
-		background-color: $red-dark
-		height: unit($row_ratio, 'rem')
-		width: 90%
-		margin-left: 5%
-
-		span
-			display: block
-			text-indent: -9999px
-			background-color: $red
-			height: unit($row_ratio, 'rem')
-
-	dq-visualisation
-		text-align: center
-		width: 100%
-
-		svg
-			display: block
-			margin: unit($row_ratio, 'rem') auto
-
-			text
-				font-weight: bold
-				font-size: ($small)rem
-
-				&.values
-					fill: $red
-					//text-shadow: 1px 1px 1px $white
-
-				&.groups
-					fill: $white
-
-			.axis
-				stroke: $grey
-
 section#quiz
 	background-color: $grey-darker
 	margin-top: unit($row_ratio, 'rem')
 	column(3/4)
+	shift(1/4, column)
 
 	nav#menu
 		position: relative
@@ -314,3 +274,49 @@ section#quiz
 
 				&:hover
 					color: $red-dark
+
+sidebar
+	column(1/4)
+	shift(-3/4, column)
+	background-color: $grey-dark
+	margin-top: unit($row_ratio, 'rem')
+	color: $white
+
+	p
+		margin-left: 5%
+		margin-top: unit($row_ratio, 'rem')
+
+	#progress
+		background-color: $red-dark
+		height: unit($row_ratio, 'rem')
+		width: 90%
+		margin-left: 5%
+
+		span
+			display: block
+			text-indent: -9999px
+			background-color: $red
+			height: unit($row_ratio, 'rem')
+
+	dq-visualisation
+		text-align: center
+		width: 100%
+
+		svg
+			display: block
+			margin: unit($row_ratio, 'rem') auto
+
+			text
+				font-weight: bold
+				font-size: ($small)rem
+
+				&.values
+					fill: $red
+					//text-shadow: 1px 1px 1px $white
+
+				&.groups
+					fill: $white
+
+			.axis
+				stroke: $grey
+

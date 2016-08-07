@@ -109,16 +109,8 @@ dirtyQuestionsApp.controller("QuestionController",
 			$scope.update_stats();
 		}, true);
 
-	}
-);
-
-dirtyQuestionsApp.controller("ResetController", 
-	function QuestionController($scope, $location, questions){
-		$scope.questions = questions;
-
-		$scope.reset = function() {
-			$scope.questions.populateFromHttp();
-			$location.url('/');
-		};
+		$scope.$on('$routeChangeSuccess', function() {
+			$('sidebar').relativelySticky({offset: -13});
+		});
 	}
 );

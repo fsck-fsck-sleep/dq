@@ -1,0 +1,7 @@
+$(function() {
+    
+    
+    $('aside').relativelySticky();
+    
+    
+});

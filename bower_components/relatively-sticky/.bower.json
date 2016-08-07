@@ -1,0 +1,14 @@
+{
+  "name": "relatively-sticky",
+  "homepage": "https://github.com/corysimmons/relatively-sticky",
+  "_release": "857cfdfc8a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "857cfdfc8af871dd4a9b24ec47729466a089f7b1"
+  },
+  "_source": "https://github.com/corysimmons/relatively-sticky.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/corysimmons/relatively-sticky.git",
+  "_direct": true
+}

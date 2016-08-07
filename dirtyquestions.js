@@ -5,7 +5,7 @@ var dirtyQuestionsApp = angular.module('dirtyQuestionsApp', ['ngRoute']);
 dirtyQuestionsApp.value('localStorage', window.localStorage);
 
 dirtyQuestionsApp.config(function($compileProvider) {
-	$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|data):/);
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|data):/);
 });
 
 dirtyQuestionsApp.config(function($routeProvider) {

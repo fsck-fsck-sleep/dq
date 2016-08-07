@@ -132,8 +132,8 @@ ng-view > article {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 17.6%;
-  margin-left: 41.2%;
+  width: 31.33333333333333%;
+  margin-left: 34.33333333333333%;
   margin-right: 3%;
 }
 ng-view > article:before,
@@ -147,8 +147,28 @@ ng-view > article:after {
 ng-view > article:last-child {
   margin-right: 0%;
 }
+ng-view > article.welcome {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 17.6%;
+  margin-left: 41.2%;
+  margin-right: 3%;
+}
+ng-view > article.welcome:before,
+ng-view > article.welcome:after {
+  content: '';
+  display: table;
+}
+ng-view > article.welcome:after {
+  clear: both;
+}
+ng-view > article.welcome:last-child {
+  margin-right: 0%;
+}
 @media screen and (max-width: 1280px) {
-  ng-view > article {
+  ng-view > article.welcome {
     *zoom: 1;
     float: left;
     clear: none;
@@ -157,15 +177,15 @@ ng-view > article:last-child {
     margin-left: 34.33333333333333%;
     margin-right: 3%;
   }
-  ng-view > article:before,
-  ng-view > article:after {
+  ng-view > article.welcome:before,
+  ng-view > article.welcome:after {
     content: '';
     display: table;
   }
-  ng-view > article:after {
+  ng-view > article.welcome:after {
     clear: both;
   }
-  ng-view > article:last-child {
+  ng-view > article.welcome:last-child {
     margin-right: 0%;
   }
 }
@@ -195,66 +215,6 @@ ng-view > article ul li a {
 ng-view > article ul li a:hover {
   background-color: #4e0c00;
 }
-sidebar {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-  background-color: #444;
-  margin-top: 1.25rem;
-  color: #eee;
-}
-sidebar:before,
-sidebar:after {
-  content: '';
-  display: table;
-}
-sidebar:after {
-  clear: both;
-}
-sidebar:last-child {
-  margin-right: 0%;
-}
-sidebar p {
-  margin-left: 5%;
-  margin-top: 1.25rem;
-}
-sidebar #progress {
-  background-color: #701100;
-  height: 1.25rem;
-  width: 90%;
-  margin-left: 5%;
-}
-sidebar #progress span {
-  display: block;
-  text-indent: -9999px;
-  background-color: #f00;
-  height: 1.25rem;
-}
-sidebar dq-visualisation {
-  text-align: center;
-  width: 100%;
-}
-sidebar dq-visualisation svg {
-  display: block;
-  margin: 1.25rem auto;
-}
-sidebar dq-visualisation svg text {
-  font-weight: bold;
-  font-size: 0.75rem;
-}
-sidebar dq-visualisation svg text.values {
-  fill: #f00;
-}
-sidebar dq-visualisation svg text.groups {
-  fill: #eee;
-}
-sidebar dq-visualisation svg .axis {
-  stroke: #777;
-}
 section#quiz {
   background-color: #222;
   margin-top: 1.25rem;
@@ -265,6 +225,8 @@ section#quiz {
   width: 74.25%;
   margin-left: 0%;
   margin-right: 3%;
+  position: relative;
+  left: 25.75%;
 }
 section#quiz:before,
 section#quiz:after {
@@ -404,4 +366,66 @@ section#quiz form#questions input[type=checkbox]:checked + label {
 }
 section#quiz form#questions input[type=checkbox]:checked + label:hover {
   color: #701100;
+}
+sidebar {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  left: -77.25%;
+  background-color: #444;
+  margin-top: 1.25rem;
+  color: #eee;
+}
+sidebar:before,
+sidebar:after {
+  content: '';
+  display: table;
+}
+sidebar:after {
+  clear: both;
+}
+sidebar:last-child {
+  margin-right: 0%;
+}
+sidebar p {
+  margin-left: 5%;
+  margin-top: 1.25rem;
+}
+sidebar #progress {
+  background-color: #701100;
+  height: 1.25rem;
+  width: 90%;
+  margin-left: 5%;
+}
+sidebar #progress span {
+  display: block;
+  text-indent: -9999px;
+  background-color: #f00;
+  height: 1.25rem;
+}
+sidebar dq-visualisation {
+  text-align: center;
+  width: 100%;
+}
+sidebar dq-visualisation svg {
+  display: block;
+  margin: 1.25rem auto;
+}
+sidebar dq-visualisation svg text {
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+sidebar dq-visualisation svg text.values {
+  fill: #f00;
+}
+sidebar dq-visualisation svg text.groups {
+  fill: #eee;
+}
+sidebar dq-visualisation svg .axis {
+  stroke: #777;
 }
