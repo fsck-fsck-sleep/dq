@@ -147,6 +147,28 @@ ng-view > article:after {
 ng-view > article:last-child {
   margin-right: 0%;
 }
+@media screen and (max-width: 1280px) {
+  ng-view > article {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 31.33333333333333%;
+    margin-left: 34.33333333333333%;
+    margin-right: 3%;
+  }
+  ng-view > article:before,
+  ng-view > article:after {
+    content: '';
+    display: table;
+  }
+  ng-view > article:after {
+    clear: both;
+  }
+  ng-view > article:last-child {
+    margin-right: 0%;
+  }
+}
 ng-view > article h1 {
   width: 100%;
   text-align: center;
@@ -157,7 +179,7 @@ ng-view > article ul {
 }
 ng-view > article ul li {
   display: inline-block;
-  margin: 0 1.25rem;
+  margin: 0 0.625rem;
 }
 ng-view > article ul li a {
   color: #eee;
