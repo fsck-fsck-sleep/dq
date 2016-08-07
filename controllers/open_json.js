@@ -14,7 +14,7 @@ dirtyQuestionsApp.controller("OpenJSONController",
 				fileReader.readAsText(newVal[0], $scope)
 					.then(function(result) {
 						$scope.questions.content = JSON.parse(result);
-							$location.url('/');
+						$location.url('/quiz');
 					});
 			}
 		}, true);

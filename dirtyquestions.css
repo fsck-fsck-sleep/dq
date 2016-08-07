@@ -215,6 +215,11 @@ ng-view > article ul li a {
 ng-view > article ul li a:hover {
   background-color: #4e0c00;
 }
+ng-view > article p.processing {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
 section#quiz {
   background-color: #222;
   margin-top: 1.25rem;

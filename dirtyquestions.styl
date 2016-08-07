@@ -130,14 +130,22 @@ ng-view > article
 	h1
 		width: 100%
 		text-align: center
+
 	ul
 		margin-top: unit($row_ratio, 'rem')
 		text-align: center
+
 		li
 			display: inline-block
 			margin: 0 unit($row_ratio / 2, 'rem')
+
 			a
 				button()
+	
+	p.processing
+		color: $grey
+		font-style: italic
+		text-align: center
 
 // quiz
 
@@ -319,4 +327,3 @@ sidebar
 
 			.axis
 				stroke: $grey
-
