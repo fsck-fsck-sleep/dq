@@ -147,7 +147,7 @@ ng-view > article:after {
 ng-view > article:last-child {
   margin-right: 0%;
 }
-ng-view > article.welcome {
+ng-view > article#welcome {
   *zoom: 1;
   float: left;
   clear: none;
@@ -156,19 +156,19 @@ ng-view > article.welcome {
   margin-left: 41.2%;
   margin-right: 3%;
 }
-ng-view > article.welcome:before,
-ng-view > article.welcome:after {
+ng-view > article#welcome:before,
+ng-view > article#welcome:after {
   content: '';
   display: table;
 }
-ng-view > article.welcome:after {
+ng-view > article#welcome:after {
   clear: both;
 }
-ng-view > article.welcome:last-child {
+ng-view > article#welcome:last-child {
   margin-right: 0%;
 }
 @media screen and (max-width: 1280px) {
-  ng-view > article.welcome {
+  ng-view > article#welcome {
     *zoom: 1;
     float: left;
     clear: none;
@@ -177,15 +177,15 @@ ng-view > article.welcome:last-child {
     margin-left: 34.33333333333333%;
     margin-right: 3%;
   }
-  ng-view > article.welcome:before,
-  ng-view > article.welcome:after {
+  ng-view > article#welcome:before,
+  ng-view > article#welcome:after {
     content: '';
     display: table;
   }
-  ng-view > article.welcome:after {
+  ng-view > article#welcome:after {
     clear: both;
   }
-  ng-view > article.welcome:last-child {
+  ng-view > article#welcome:last-child {
     margin-right: 0%;
   }
 }
