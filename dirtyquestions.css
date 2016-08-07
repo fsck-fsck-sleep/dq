@@ -385,6 +385,7 @@ sidebar {
   background-color: #444;
   margin-top: 1.25rem;
   color: #eee;
+  transition: top 0.2s ease;
 }
 sidebar:before,
 sidebar:after {

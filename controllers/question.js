@@ -1,6 +1,6 @@
 'use strict';
 
-dirtyQuestionsApp.controller("QuestionController", 
+dirtyQuestionsApp.controller("QuestionController",
 	function QuestionController($scope, questions){
 		$scope.ratings = [
 			{id: 0, label: 'never (hard limit)'},
@@ -22,17 +22,17 @@ dirtyQuestionsApp.controller("QuestionController",
 		$scope.questionFilterNote = '';
 		// separate scope variable for throttling
 		$scope.questionFilterNoteTmp = '';
-		
+
 		$scope.questionFilterDone = '';
 		$scope.questionFilterDoneAny = true;
 
 		$scope.questionFilterRating = null;
 
 		$scope.questionFilter = function(obj, i) {
-			if (($scope.questionFilterText !== '') 
+			if (($scope.questionFilterText !== '')
 					&& (obj.text.toLowerCase().indexOf($scope.questionFilterText.toLowerCase()) == -1))
 				return false;
-			if (($scope.questionFilterNote !== '') 
+			if (($scope.questionFilterNote !== '')
 					&& (obj.note.toLowerCase().indexOf($scope.questionFilterNote.toLowerCase()) == -1))
 				return false;
 			if (!$scope.questionFilterDoneAny
@@ -110,7 +110,18 @@ dirtyQuestionsApp.controller("QuestionController",
 		}, true);
 
 		$scope.$on('$routeChangeSuccess', function() {
-			$('sidebar').relativelySticky({offset: -13});
+			var $sidebar = $('sidebar'),
+				sidebarTop = $sidebar.offset().top;
+
+			$(window).scroll($.throttle(250, function() {
+				var windowTop = $(window).scrollTop();
+
+				if (sidebarTop < windowTop) {
+					$sidebar.css('top', windowTop + 'px');
+				} else {
+					$sidebar.css('top', 0);
+				}
+			}));
 		});
 	}
 );
