@@ -1,11 +1,13 @@
 <section id="quiz">
+	<nav id="help">
+		<a href="#/help">?</a>
+	</nav>
 	<nav id="menu">
 		<ul>
 			<li><a href="data:application/json,{{exportJSON()}}" download>Save quiz to file</a>
 			<li><a href="data:text/csv,{{exportCSV()}}">Download CSV</a>
 			<li><a href="#/open">Open saved quiz</a>
 			<li><a class="reset" href="#/reset">Reset</a>
-			<li><a href="#/help"><strong>Help</strong></a>
 		</ul>
 	</nav>
 	<form id="filter">

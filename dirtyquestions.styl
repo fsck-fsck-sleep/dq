@@ -94,6 +94,10 @@ button()
 	&:hover
 		background-color: darken($red-dark, 30%)
 
+	&:active
+		background-color: lighten($red-dark, 10%)
+		outline: 0
+
 button, .button
 	button()
 
@@ -154,6 +158,26 @@ section#quiz
 	margin-top: unit($row_ratio, 'rem')
 	column(3/4)
 	shift(1/4, column)
+
+	nav#help
+		float: right
+		background-color: $grey-dark
+		padding: 0 unit($row_ratio / 2, 'rem')
+
+		&:hover 
+			background-color: $grey-light
+
+		&:active
+			background-color: $grey
+
+		a
+			display: inline-block
+			color: white
+			line-height: ($row_ratio * 2)
+			font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif
+			
+			&:active
+				outline: 0
 
 	nav#menu
 		position: relative

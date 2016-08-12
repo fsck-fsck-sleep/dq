@@ -34,7 +34,7 @@ h1 {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.428571428571429;
-  margin: 0.178571428571429rem 0;
+  margin: 0.178571428571428rem 0;
 }
 h2 {
   font-size: 2rem;
@@ -46,7 +46,7 @@ h3 {
   font-size: 1.15rem;
   font-weight: bold;
   line-height: 1.25;
-  margin: 0.543478260869565rem 0;
+  margin: 0.543478260869566rem 0;
 }
 section#app > footer {
   font-size: 0.75rem;
@@ -55,8 +55,8 @@ section#app > footer {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 31.33333333333333%;
-  margin-left: 34.33333333333333%;
+  width: 31.3333333333333%;
+  margin-left: 34.3333333333333%;
   margin-right: 3%;
   text-align: center;
   margin-top: 1.666666666666667rem;
@@ -88,7 +88,7 @@ button,
   font-weight: bold;
   border: none;
   font-size: 1.15rem;
-  line-height: 2.173913043478261;
+  line-height: 2.173913043478262;
   padding: 0 1.086956521739131rem;
   display: inline-block;
   transition: background-color 0.2s ease;
@@ -96,6 +96,11 @@ button,
 button:hover,
 .button:hover {
   background-color: #4e0c00;
+}
+button:active,
+.button:active {
+  background-color: #981700;
+  outline: 0;
 }
 input[type=file] {
   display: none;
@@ -106,13 +111,17 @@ input[type=file] + label {
   font-weight: bold;
   border: none;
   font-size: 1.15rem;
-  line-height: 2.173913043478261;
+  line-height: 2.173913043478262;
   padding: 0 1.086956521739131rem;
   display: inline-block;
   transition: background-color 0.2s ease;
 }
 input[type=file] + label:hover {
   background-color: #4e0c00;
+}
+input[type=file] + label:active {
+  background-color: #981700;
+  outline: 0;
 }
 select {
   width: 1.25em;
@@ -132,8 +141,8 @@ ng-view > article {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 31.33333333333333%;
-  margin-left: 34.33333333333333%;
+  width: 31.3333333333333%;
+  margin-left: 34.3333333333333%;
   margin-right: 3%;
 }
 ng-view > article:before,
@@ -173,8 +182,8 @@ ng-view > article#welcome:last-child {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 31.33333333333333%;
-    margin-left: 34.33333333333333%;
+    width: 31.3333333333333%;
+    margin-left: 34.3333333333333%;
     margin-right: 3%;
   }
   ng-view > article#welcome:before,
@@ -207,13 +216,17 @@ ng-view > article ul li a {
   font-weight: bold;
   border: none;
   font-size: 1.15rem;
-  line-height: 2.173913043478261;
+  line-height: 2.173913043478262;
   padding: 0 1.086956521739131rem;
   display: inline-block;
   transition: background-color 0.2s ease;
 }
 ng-view > article ul li a:hover {
   background-color: #4e0c00;
+}
+ng-view > article ul li a:active {
+  background-color: #981700;
+  outline: 0;
 }
 ng-view > article p.processing {
   color: #777;
@@ -243,6 +256,26 @@ section#quiz:after {
 }
 section#quiz:last-child {
   margin-right: 0%;
+}
+section#quiz nav#help {
+  float: right;
+  background-color: #444;
+  padding: 0 0.625rem;
+}
+section#quiz nav#help:hover {
+  background-color: #bbb;
+}
+section#quiz nav#help:active {
+  background-color: #777;
+}
+section#quiz nav#help a {
+  display: inline-block;
+  color: #fff;
+  line-height: 2.5;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+section#quiz nav#help a:active {
+  outline: 0;
 }
 section#quiz nav#menu {
   position: relative;

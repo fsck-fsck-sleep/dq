@@ -8,7 +8,7 @@ dirtyQuestionsApp.controller("QuestionController",
 			{id: 2, label: 'willing, no special appeal'},
 			{id: 3, label: 'occasional / mild interest'},
 			{id: 4, label: 'regular / interested'},
-			{id: 5, label: 'wild ;)'},
+			{id: 5, label: 'wild'},
 			{id: '-', label: 'n/a'},
 			{id: '?', label: 'not sure what this is..'}
 		];
