@@ -161,29 +161,29 @@ section#quiz
 
 	nav#help
 		float: right
-		background-color: $grey-dark
-		padding: 0 unit($row_ratio / 2, 'rem')
-
-		&:hover 
-			background-color: $grey-light
-
-		&:active
-			background-color: $grey
 
 		a
+			background-color: $grey-dark
+			padding: 0 unit($row_ratio / 2, 'rem')
 			display: inline-block
 			color: white
 			line-height: ($row_ratio * 2)
 			font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif
 			
 			&:active
-				outline: 0
+				outline: none
+				background-color: $grey
+
+			&:hover 
+				background-color: $grey-light
+
 
 	nav#menu
 		position: relative
 		float: right
-		padding: unit($row_ratio / 2, 'rem')
+		padding: 0 unit($row_ratio / 2, 'rem')
 		background-color: $grey-dark
+		line-height: ($row_ratio * 2)
 		transition: background-color .2s ease
 
 		&:before
